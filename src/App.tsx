@@ -1,9 +1,15 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import FavouritePage from './pages/FavouritePage';
 
 
 function App() {
   return (
-    <h1 className='font-bold'>Hello React</h1>
+    <Routes>
+      <Route path='/' element={ <HomePage /> } />
+      <Route path='/favourites' element={ <FavouritePage /> } />
+    </Routes>
   );
 }
 
